@@ -22,7 +22,6 @@ for x in range(1, 5):
     s.forward(150)
     s.left(90)
 
-
 u.reset()
 u.penup()
 u.left(180)
