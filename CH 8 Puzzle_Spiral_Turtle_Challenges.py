@@ -1,5 +1,4 @@
 import turtle
-
 #create dividing line to split the canvas for two puzzles
 divider = turtle.Turtle()
 divider.left(90)
