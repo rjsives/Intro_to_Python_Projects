@@ -14,7 +14,7 @@ t.left(90)
 t.forward(20)
 t.right(90)
 t.pendown()
-t.pencolor("blue")
+t.pencolor("dodgerblue")
 t.speed(0)
 
 
@@ -36,7 +36,7 @@ for x in range(1, 20):
 
 
 t.reset
-t.speed(9)
+t.speed(10)
 t.penup()
 t.forward(50)
 t.right(90)
@@ -56,7 +56,7 @@ t2.right(90)
 t2.forward(20)
 t2.left(90)
 t2.pendown()
-t2.pencolor("dark grey")
+t2.pencolor("greenyellow")
 
 #adding an if statement based on the condition of the iterator x being even or odd
 for x in range(1, 19):
@@ -65,5 +65,27 @@ for x in range(1, 19):
         t2.left(175)
     else:
         t2.left(225)
+
+#Multicolored Spirograph design using rhombus
+t2.up()
+t2.right(87)
+t2.forward(100)
+t2.down()
+
+for x in range(1, 81):
+    t2.pencolor("orangered")
+    t2.forward(10)
+    t2.pencolor("green")
+    t2.forward(30)
+    t2.pencolor("orangered")
+    t2.forward(10)
+    if x % 2 == 0:
+        t2.left(111)
+    else:
+        t2.pencolor("orangered")
+        t2.forward(25)
+        t2.pencolor("dodgerblue")
+        t2.forward(10)
+        t2.left(60)
 
 turtle.done()
