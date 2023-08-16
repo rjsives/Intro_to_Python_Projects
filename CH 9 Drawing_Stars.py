@@ -107,7 +107,8 @@ def my_star(size, color, filled):
     if filled:
         t3.end_fill()
 
-
+my_star(200, "teal", True)
+my_star(200, "red", False)
 my_star(100, "black", True)
 my_star(100, "red", False)
 my_star(50, "yellow", True)
