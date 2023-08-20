@@ -1,7 +1,8 @@
 import time
 import turtle
+from turtle import Turtle
 
-t1 = turtle.Turtle()
+t1: Turtle = turtle.Turtle()
 """t1.up()
 t1.left(180)
 t1.forward(300)
@@ -34,7 +35,7 @@ def star_designer(size, points):
 def complicated_star(size, points):
     double_points = points * 2
     angle1 = 180 - (180/points)
-    angle2 = angle1*3
+    angle2 = (angle1*3)-360
     angle3 = 180/points
     angle4 = 180 - (180/points)*3
 
@@ -58,24 +59,40 @@ def complicated_star(size, points):
             elif x == points-1:
 
                 t1.pencolor("green")
+                #t1.left(180)
+                #t1.forward(size)
+                # t1.right(angle1 + (180-angle1)/2)
+                #t1.right(angle1 + (180-angle1)/2)
+                #t1.forward(size)
                 t1.left(180)
                 t1.forward(size)
+                t1.right(angle1)
+                t1.forward(size*2)
+                t1.right(90)
+                t1.forward(size)
+                t1.right(90)
+                t1.forward(size)
+                t1.right(90)
+                t1.forward(size)
                 t1.right(angle1 + (180-angle1)/2)
-                t1.forward(size + (size/points))
-                time.sleep(0)
-                t1.left(135)
+                t1.forward((size/points*2))
+                t1.right(80)
+                #t1.left(angle2*1.5)
 
-
-
+                time.sleep(5)
 
 
 
             else:
                 if x % 2 == 0:
                     t1.pencolor("red")
-                    t1.left(angle1)
+                    t1.right(angle1)
                 else:
-                    t1.left(angle2)
+                    t1.right(angle2)
+
+
+
+
 
 
 def ultra_complicated_star(size, points):
@@ -139,8 +156,8 @@ def double_star(size, points):
     time.sleep(2)
 
 def progressive_stars():
-    for x in range (5, 13):
-        double_star(40, x)
+    for x in range (5, 19):
+        double_star(60, x)
 
 progressive_stars()
 """
