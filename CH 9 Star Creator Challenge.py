@@ -33,15 +33,49 @@ def star_designer(size, points):
 
 def complicated_star(size, points):
     double_points = points * 2
-    angle1 = 180 - (360/points)
-    angle2 = (angle1 * 3)
+    angle1 = 180 - (180/points)
+    angle2 = angle1*3
+    angle3 = 180/points
+    angle4 = 180 - (180/points)*3
+
+
     for x in range(0, double_points):
         t1.speed(0)
         t1.forward(size)
-        if x % 2 == 0:
-            t1.left(angle1)
+        if points % 2 != 0:
+            if x % 2 == 0:
+                t1.left(angle1)
+            else:
+                t1.left(angle2)
+
         else:
-            t1.right(angle2)
+            t1.speed(2)
+            if x < points-1:
+                if x % 2 == 0:
+                    t1.left(angle1)
+                else:
+                    t1.left(angle2)
+            elif x == points-1:
+
+                t1.pencolor("green")
+                t1.left(180)
+                t1.forward(size)
+                t1.right(angle1 + (180-angle1)/2)
+                t1.forward(size + (size/points))
+                time.sleep(0)
+                t1.left(135)
+
+
+
+
+
+
+            else:
+                if x % 2 == 0:
+                    t1.pencolor("red")
+                    t1.left(angle1)
+                else:
+                    t1.left(angle2)
 
 
 def ultra_complicated_star(size, points):
@@ -102,7 +136,7 @@ def double_star(size, points):
     t1.forward(150)
     t1.down()
     throwing_star(size, points)
-    time.sleep(6)
+    time.sleep(2)
 
 def progressive_stars():
     for x in range (5, 13):
