@@ -1,6 +1,8 @@
 import time
+import math
 import turtle
 from turtle import Turtle
+pi = 3.1415926535897932
 
 t1: Turtle = turtle.Turtle()
 """t1.up()
@@ -62,7 +64,7 @@ def complicated_star(size, points):
                 t1.left(180)
                 t1.forward(size)
                 t1.right(angle1 + (180-angle1)/2)
-                t1.forward(size*2)
+                t1.forward((size*pi)/2)
                 t1.right(angle1 + (180-angle1)/2)
                 t1.forward(size)
                 t1.left(180)
@@ -161,7 +163,7 @@ def double_star(size, points):
 
 def progressive_stars():
     for x in range (5, 19):
-        double_star(150, x)
+        double_star(300, x)
 
 progressive_stars()
 """
