@@ -2,7 +2,7 @@ import time
 import math
 import turtle
 from turtle import Turtle
-pi = 3.1415926535897932
+pi = math.pi
 
 t1: Turtle = turtle.Turtle()
 """t1.up()
@@ -38,11 +38,9 @@ def complicated_star(size, points):
     double_points = points * 2
     angle1 = 180 - (180/points)
     angle2 = (angle1*3)-360
-    angle3 = 180/points
-    angle4 = 180 - (180/points)*3
-
 
     for x in range(0, double_points):
+
         t1.speed(0)
         t1.forward(size)
         if points % 2 != 0:
@@ -52,25 +50,34 @@ def complicated_star(size, points):
                 t1.left(angle2)
 
         else:
-            t1.speed(2)
+            t1.speed(0)
             if x < points-1:
                 if x % 2 == 0:
                     t1.left(angle1)
                 else:
                     t1.left(angle2)
             elif x == points-1:
-
+                t1.speed(00)
                 t1.pencolor("green")
                 t1.left(180)
                 t1.forward(size)
-                t1.right(angle1 + (180-angle1)/2)
-                t1.forward((size*pi)/2)
+                time.sleep(10)
+                t1.left(135)
+                #t1.right(angle1 + (180-angle1)/2)
+                if x<9:
+                    t1.pencolor("purple")
+                    t1.forward(((size/points) / 2))
+                else:
+                    #t1.forward(((size - points) * pi) / 2)
+                    t1.forward(size - (size / pi))
+                time.sleep(22)
                 t1.right(angle1 + (180-angle1)/2)
                 t1.forward(size)
                 t1.left(180)
-                time.sleep(2)
-                #t1.right(angle1)
-                #t1.forward(size*2)
+
+
+                # t1.right(angle1)
+                # t1.forward(size*2)
                 #t1.right(90)
                 #t1.forward(size)
                 #t1.right(90)
@@ -85,7 +92,7 @@ def complicated_star(size, points):
                 #t1.forward((size / points * 2))
                 #t1.left(angle2*1.5)
 
-                time.sleep(2)
+
 
 
 
@@ -95,6 +102,8 @@ def complicated_star(size, points):
                     t1.left(angle1)
                 else:
                     t1.left(angle2)
+
+
 
 
 
@@ -162,7 +171,7 @@ def double_star(size, points):
     time.sleep(2)
 
 def progressive_stars():
-    for x in range (5, 19):
+    for x in range (9, 60):
         double_star(300, x)
 
 progressive_stars()
