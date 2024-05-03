@@ -33,7 +33,7 @@ for x in range(1, 20):
     t.forward(100)
     t.left(95)
 
-t.reset
+
 t.speed(10)
 t.penup()
 t.forward(50)
@@ -94,18 +94,20 @@ t3.forward(100)
 t3.down()
 t3.speed(0)
 
+
 def my_star(size, color, filled):
     t3.color(color)
     if filled:
         t3.begin_fill()
-    for x in range(1, 19):
+    for y in range(1, 19):
         t3.forward(size)
-        if x % 2 == 0:
+        if y % 2 == 0:
             t3.left(175)
         else:
             t3.left(225)
     if filled:
         t3.end_fill()
+
 
 my_star(200, "teal", True)
 my_star(200, "red", False)

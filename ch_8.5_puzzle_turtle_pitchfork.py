@@ -1,6 +1,7 @@
 # Create a pitchfork facing to the right using four Turtle objects.
 
 import turtle
+
 turtle_one = turtle.Turtle()
 turtle_two = turtle.Turtle()
 turtle_three = turtle.Turtle()
@@ -29,8 +30,5 @@ turtle_four.left(90)
 turtle_four.forward(20)
 turtle_four.right(90)
 turtle_four.forward(20)
-
-
-
 
 turtle.done()
